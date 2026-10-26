@@ -1,21 +1,15 @@
 class Vehicle:
-    def __init__(self, make: str):
-        self.make = make  # Public attribute
-
-    def drive(self):
-        print(f"The {self.make} is moving forward.")
+    def __init__(self, brand: str):
+        self.brand = brand
 
 # Car inherits from Vehicle
 class Car(Vehicle):
-    def __init__(self, make: str, doors: int):
-        # Call the parent class constructor using super()
-        super().__init__(make) 
-        self.doors = doors
+    def drive(self):
+        return f"The {self.brand} is driving fast!"
 
-    def honk(self):
-        print("Beep beep!")
+# --- Running the code ---
+# 1. Instantiate a Car object with a brand parameter passed to the Vehicle parent
+my_car = Car("Toyota")
 
-# Usage Example
-my_car = Car(make="Toyota", doors=4)
-my_car.drive()  # Inherited method execution
-my_car.honk()   # Subclass-specific method execution
+# 2. Invoke the inherited attribute and unique subclass method
+print(my_car.drive())
