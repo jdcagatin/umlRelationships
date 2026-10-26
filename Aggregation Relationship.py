@@ -23,12 +23,10 @@ student2 = Student("Bob")
 my_course = Course([student1, student2])
 print(f"Course populated with: {[s.name for s in my_course.students]}")
 
-print("
-Executing: del my_course")
+print("Executing: del my_course")
 del my_course  # Wipes out the course object container
 
-print("
-Checking variable accessibility after container deletion:")
+print("Checking variable accessibility after container deletion:")
 print(f"Still active in memory -> student1: {student1.name}")
 print(f"Still active in memory -> student2: {student2.name}")
 # If 'my_course' is destroyed, student1 and student2 still live on in memory
